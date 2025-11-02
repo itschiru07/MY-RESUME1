@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: radial-gradient(circle at top left, #0a0a0a, #000);
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+  background: rgba(15, 15, 15, 0.9);
+  padding: 15px 0;
+  box-shadow: 0 4px 20px rgba(0, 180, 255, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+nav h1 {
+  color: #00b4ff;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #00b4ff;
+  transition: 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  color: #00b4ff;
+}
+
+/* HOME */
+.home {
+  width: 90%;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 3px solid #00b4ff;
+  box-shadow: 0 0 25px rgba(0, 180, 255, 0.4);
+  margin-bottom: 25px;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(0, 180, 255, 0.8);
+}
+
+.btn {
+  display: inline-block;
+  background: #00b4ff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-top: 20px;
+  box-shadow: 0 0 15px #00b4ff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #008fd1;
+  box-shadow: 0 0 30px #00b4ff;
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #00b4ff;
+  margin-bottom: 10px;
+}
+
+/* FORM */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  background: rgba(20, 20, 20, 0.8);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.2);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 12px 0;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 8px;
+}
+
+input:focus, textarea:focus {
+  border-color: #00b4ff;
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.3);
+  outline: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+  margin-top: 40px;
+}
